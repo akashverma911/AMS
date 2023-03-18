@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ambulence</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% comment %} {{form.as_p}} {% endcomment %}
+        <div>
+            <select name="vehicle_category" id="id_vehicle_category">
+                <option value="Sm">Small</option>
+                <option value="Md">Medium</option>
+                <option value="La">Large</option>
+            </select>
+        </div>
+        <div class="input-div">
+            <label for="id_book_in">Book in:</label>
+            <input type="datetime-local" name="book_in" required="" id="id_book_in">
+        </div>
+        {% csrf_token %}
+        <button type="submit">Book Ambulence</button>
+    </form>
+    
+</body>
+</html>
